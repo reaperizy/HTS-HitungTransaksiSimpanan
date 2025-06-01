@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catatan Keuangan Pribadi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Catatan Keuangan Pribadi 📝</h1>
+
+        <div class="balance-container">
+            <h4>Saldo Anda Saat Ini</h4>
+            <h1 id="balance">Rp 0</h1>
+        </div>
+
+        <div class="form-container">
+            <h3>Tambah Transaksi Baru</h3>
+            <form id="transaction-form">
+                <div class="form-control">
+                    <label for="type">Jenis Transaksi</label>
+                    <select id="type" required>
+                        <option value="pemasukan">Pemasukan (Gaji, dll)</option>
+                        <option value="pengeluaran">Pengeluaran</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="description">Deskripsi (cth: Gaji Bulanan, Bayar Listrik)</label>
+                    <input type="text" id="description" placeholder="Masukkan deskripsi..." required>
+                </div>
+                <div class="form-control">
+                    <label for="amount">Jumlah (tanpa titik atau koma)</label>
+                    <input type="number" id="amount" placeholder="Masukkan jumlah..." required>
+                </div>
+                <div class="form-control">
+                    <label for="bank">Sumber Bank (cth: BCA, Mandiri)</label>
+                    <input type="text" id="bank" placeholder="Masukkan nama bank..." required>
+                </div>
+                <button class="btn">Simpan Transaksi</button>
+            </form>
+        </div>
+
+        <h3>Riwayat Transaksi</h3>
+        <ul id="transactions-list" class="list">
+            </ul>
+
+        <button id="clear-btn" class="btn btn-danger">Hapus Semua Data</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
